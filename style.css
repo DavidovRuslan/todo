@@ -1,0 +1,154 @@
+html{
+    font-family: 'Andika New Basic', sans-serif;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: linear-gradient(100deg,#ECDF9E,#f0a254);
+
+}
+.wrapper {
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+}
+
+
+/* header */
+.header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
+    font-size: 2em;
+    color: #4C1359;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black, 0 0 1em #4C1359;
+}
+/* .header h2 {
+    text-shadow: hoff  #000;
+
+} */
+
+
+/* todo body */
+.todo-ul{
+    display: flex;
+    flex-direction: column;
+
+}
+.todo-li{
+    width: 100%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #D9F09E;
+    border-radius: 20px ;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+}
+.delete-animation{
+    transform:translateX(-100%);
+    opacity: 0;
+}
+.todo-li:hover{
+    background-color: #868686;
+
+}
+.todo-p{
+    padding: 5px 10px;
+    text-align: left;
+}
+.todo-li_btn{
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: auto;
+    align-items: center;
+}
+.btn{
+    font-size: 1.1em;
+    color: chocolate;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+
+
+/* form */
+.form {
+    flex-direction: row;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    bottom: 5px;
+    left: 15%;
+    width: 100%;
+}
+
+.form-input {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    min-height: 50px;
+    border: none;
+    border-radius: 5px 0 0  5px;
+    background-color: #D9F09E;
+    width: 70%;
+}
+.form-input::placeholder{
+    padding-left: 10px;
+}
+.form-btn{
+    background-color: #D9F09E;
+    color: chocolate;
+    padding: 10px 10px;
+    min-height: 50px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.form-btn:hover{
+    background-color: chocolate;
+    color:  #D9F09E;
+}
+@media screen and (max-device-width: 800px){
+    .wrapper{
+        width: 90%;
+    }
+    .todo-li_btn{
+        width: 20%;
+    }
+}
+@media screen and (max-device-width: 450px){
+    .wrapper{
+        width: 95%;
+    }
+    .todo-li_btn{
+        width: 30%;
+    }
+    .form{
+        left: 10%;
+    }
+    .form-input{
+        font-size: 0.8em;
+    }
+}
